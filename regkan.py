@@ -1,7 +1,5 @@
 # from common.public import public # type: ignore
 
-from src.efficient_kan import KAN
-# Train on MNIST
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -15,6 +13,7 @@ from sklearn.model_selection import train_test_split
 import pandas as pd
 import matplotlib.pyplot as plt
 import scipy.io
+from efficient_kan import KAN
 
 # Load data
 transform = transforms.Compose(
