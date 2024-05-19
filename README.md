@@ -1,5 +1,5 @@
 # RegKAN
-This repository contains a demo of the application of efficient Kolmogorov-Arnold Network (KAN) for a regression task (RegKAN). The original implementation of efficient KAN can be found [here](https://github.com/Blealtan/efficient-kan).
+This repository contains a demo of the application of efficient Kolmogorov-Arnold Network (KAN) for a regression task. The original implementation of efficient KAN can be found [here](https://github.com/Blealtan/efficient-kan).
 
 The regression task here is curve fitting.
 
