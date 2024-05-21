@@ -3,7 +3,7 @@ This repository contains a demo of the application of efficient Kolmogorov-Arnol
 
 The regression task here is curve fitting.
 
-The curve function is: y = a·sin(b·x)+c·cos(d·x), x = 0:0.2:10.
+The curve function is: y = a·sin(b·x)+c·cos(d·x), x = 0:0.2:10, you may change it to whatever function you would like to fit.
 
 The training dataset was created using the matlab code ‘create_dataset.m’ under 'Data' folder.
 
