@@ -76,7 +76,6 @@ for epoch in range(20):
             optimizer.step()
             train_loss += loss.item()*inputs.size(0)
             train_num += inputs.size(0)
-
             # print('Epoch %d loss: %.3f' % (epoch + 1, running_loss / len(trainloader)))
             pbar.set_postfix(lr=optimizer.param_groups[0]['lr'])
     train_loss_all.append(train_loss/train_num)
@@ -93,10 +92,6 @@ for epoch in range(20):
             outputs = model(inputs)
             val_loss += loss_func(outputs, labels.to(device)).item()*inputs.size(0)
             val_num += inputs.size(0)
-
-            # val_accuracy += (
-            #     (output == labels.to(device)).float().mean().item()
-            # )
     val_loss_all.append(val_loss/val_num)
     # val_accuracy /= len(valloader)
 
