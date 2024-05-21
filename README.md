@@ -9,6 +9,8 @@ The training dataset was created using the matlab code ‘create_dataset.m’ un
 
 Network specifics: size(inputlayer, hiddenlayer, outputlayer) = [51, 64, 4].
 
+The input is curve values y with a length of 51, and the output is the coefficients vector [a, b, c, d] with a length of 4.
+
 The loss curves of KAN and MLP after training for 20 epochs are as follows:
 
 <img width="1153" alt="image" src="https://github.com/JianpanHuang/RegKAN/assets/43700029/579b4077-4974-40b9-afe2-cd9e1447f877">
