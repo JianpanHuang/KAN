@@ -50,14 +50,14 @@ model.to(device)
 # Define optimizer
 # optimizer = optim.SGD(model.parameters(), lr=1e-3, weight_decay=1e-4)
 optimizer = optim.AdamW(model.parameters(), lr=1e-3, weight_decay=1e-4)
-loss_func = nn.MSELoss()
-train_loss_all = []
-val_loss_all = []
 # Define learning rate scheduler
 scheduler = optim.lr_scheduler.ExponentialLR(optimizer, gamma=0.8)
 
 # Define loss
-criterion = nn.CrossEntropyLoss()
+# criterion = nn.CrossEntropyLoss()
+loss_func = nn.MSELoss()
+train_loss_all = []
+val_loss_all = []
 losses = []
 for epoch in range(20):
     # Train
@@ -68,26 +68,14 @@ for epoch in range(20):
         running_loss = 0.0
         for i, (inputs, targets) in enumerate(pbar):
             inputs = inputs.view(-1, 51).to(device)
-            # print(images.dtype)
-            # print(labels.shape)
             optimizer.zero_grad()
             outputs = model(inputs)
-            # print(output.shape)
-            # print(labels.shape)
-            # loss = mae(output, labels.to(device))
-            # loss.backward()
-            # optimizer.step()
-            # accuracy = (output == labels.to(device)).float().mean()
-            # pbar.set_postfix(loss=loss.item(), accuracy=accuracy.item(), lr=optimizer.param_groups[0]['lr'])
-
             loss = loss_func(outputs, targets.to(device))
             optimizer.zero_grad()
             loss.backward()
             optimizer.step()
             train_loss += loss.item()*inputs.size(0)
             train_num += inputs.size(0)
-
-
             # print('Epoch %d loss: %.3f' % (epoch + 1, running_loss / len(trainloader)))
             pbar.set_postfix(lr=optimizer.param_groups[0]['lr'])
     train_loss_all.append(train_loss/train_num)
@@ -104,10 +92,6 @@ for epoch in range(20):
             outputs = model(inputs)
             val_loss += loss_func(outputs, labels.to(device)).item()*inputs.size(0)
             val_num += inputs.size(0)
-
-            # val_accuracy += (
-            #     (output == labels.to(device)).float().mean().item()
-            # )
     val_loss_all.append(val_loss/val_num)
     # val_accuracy /= len(valloader)
 
