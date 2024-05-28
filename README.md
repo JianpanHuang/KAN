@@ -17,6 +17,7 @@ The loss curves of KAN and MLP after training for 30 epochs are as follows:
 
 <img width="1053" alt="image" src="https://github.com/JianpanHuang/KAN/assets/43700029/a656042a-6e78-4684-b54f-5cb1d3c56483">
 
+
 The predicted curves by MLP and KAN after training for 30 epochs are as follows:
 
 ![Figure_1_res](https://github.com/JianpanHuang/KAN/assets/43700029/cae56653-cea5-4ba2-a273-c3d584fedf6e)
