@@ -13,7 +13,8 @@ The input is curve values y with a length of 51, and the output is the coefficie
 
 The loss curves of KAN and MLP after training for 30 epochs are as follows:
 
-<img width="1054" alt="image" src="https://github.com/JianpanHuang/KAN/assets/43700029/f3d6aa87-5c72-4a2c-a8da-1bd6a83a4bbd">
+<img width="1116" alt="image" src="https://github.com/JianpanHuang/KAN/assets/43700029/b406021e-5d43-490d-98fc-7ce5347c1421">
+
 
 The predicted curves by MLP and KAN after training for 30 epochs are as follows:
 
