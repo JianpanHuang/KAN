@@ -5,7 +5,7 @@ The curve function here is: y = a·sin(b·x)+c·cos(d·x), x = 0:0.2:10, as show
 
 The training dataset was created using the matlab code ‘create_dataset.m’ under 'Data' folder.
 
-Network specifics: size(inputlayer, hiddenlayer, outputlayer) = [51, 64, 4].
+Network specifics: size(inputlayer, hiddenlayer, outputlayer) = [51, 100, 4].
 
 The input is curve values y with a length of 51, and the output is the coefficients vector [a, b, c, d] with a length of 4, as shown below.
 
