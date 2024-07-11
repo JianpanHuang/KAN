@@ -1,7 +1,7 @@
 # KAN
 This repository demonstrates the application of efficient Kolmogorov-Arnold Networks (KAN) in a curve fitting (regression) task. The original KAN can be found [here](https://github.com/KindXiaoming/pykan), while the original efficient KAN can be found [here](https://github.com/Blealtan/efficient-kan).
 
-The curve function here is: y = a·sin(b·x)+c·cos(d·x), x = 0:0.2:10, as shown below.
+The curve function here is: y = a·sin(b·x)+c·cos(d·x), x = 0:0.2:10. [a, b, c, d] used here are randomly sampled from [0.1:0.1:2].
 
 **You may change it to whatever function you would like to fit.**
 
