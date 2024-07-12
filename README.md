@@ -1,5 +1,6 @@
 # KAN
 This repository demonstrates the application of efficient Kolmogorov-Arnold Networks (KAN) in a curve fitting (regression) task. The original KAN can be found [here](https://github.com/KindXiaoming/pykan), while the original efficient KAN can be found [here](https://github.com/Blealtan/efficient-kan).
+Another similar example of Lorentzian curve fitting using KAN can be found at [here](https://github.com/JianpanHuang/CEST-KAN).
 
 The curve function here is: y = a·sin(b·x)+c·cos(d·x), x = 0:0.2:10. [a, b, c, d] used here are randomly sampled from [0.1:0.1:2].
 
